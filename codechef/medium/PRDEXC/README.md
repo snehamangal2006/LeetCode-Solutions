@@ -58,30 +58,35 @@ It can be verified that this is the minimum number of operations needed.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-29T16:10:30.795Z  
+**Submitted:** 2026-07-29T16:12:08.349Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
-int t;
+    int t;
     cin >> t;
 
     while (t--) {
         int X, Y, P;
         cin >> X >> Y >> P;
-        int count=0;
-        int maxi = max(X,Y);
-        int mini = min(X,Y);
-        while(X*Y<P){
-            if(( mini*(maxi+1)) >= P)
-            count++;
-        } cout<<count<<endl;
-} return 0;
-}
 
+        int count = 0;
+
+        while (1LL * X * Y < P) {
+            if (X < Y)
+                X++;
+            else
+                Y++;
+            count++;
+        }
+
+        cout << count << endl;
+    }
+
+    return 0;
+}
 ```
 
 ---
