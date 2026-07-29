@@ -2,19 +2,25 @@
 using namespace std;
 
 int main() {
-	// your code goes here
-int t;
+    int t;
     cin >> t;
 
     while (t--) {
         int X, Y, P;
         cin >> X >> Y >> P;
-        int count=0;
-        int maxi = max(X,Y);
-        int mini = min(X,Y);
-        while(X*Y<P){
-            if(( mini*(maxi+1)) >= P)
+
+        int count = 0;
+
+        while (1LL * X * Y < P) {
+            if (X < Y)
+                X++;
+            else
+                Y++;
             count++;
-        } cout<<count<<endl;
-} return 0;
+        }
+
+        cout << count << endl;
+    }
+
+    return 0;
 }
