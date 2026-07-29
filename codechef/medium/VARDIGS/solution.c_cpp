@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+int x;
+cin>>x;
+ int d=x%10;
+ int n2=x/10;
+ if(d==n2) cout<<"No";
+ else cout<<"Yes";
+}
