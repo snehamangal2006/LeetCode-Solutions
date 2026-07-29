@@ -72,34 +72,40 @@ In the first month, its price increases by $Y=2$ to become $8$ coins. Chef earns
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-29T15:58:59.473Z  
+**Submitted:** 2026-07-29T16:00:48.644Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
-int t;
-cin>>t;
-while(t--){
-    int x,y,z;
-    int p=-1;
-    cin>>x>>y>>z;
-    int sum=x;
-    bool found =false;
-    for(int i=1;i<=x;i++){
-    int sum += y;
-    if(sum==z){
-        p=i;
-        found=true;
-        break;
-    }
-} if(found) cout<<i<<endl;
-else cout<<-1<<endl;
-} return 0;
-}
+    int t;
+    cin >> t;
 
+    while (t--) {
+        int X, Y, Z;
+        cin >> X >> Y >> Z;
+
+        if (Z <= Y) {
+            cout << -1 << endl;
+            continue;
+        }
+
+        int price = X;
+        int coins = 0;
+        int months = 0;
+
+        while (coins < price) {
+            months++;
+            price += Y;
+            coins += Z;
+        }
+
+        cout << months << endl;
+    }
+
+    return 0;
+}
 ```
 
 ---
