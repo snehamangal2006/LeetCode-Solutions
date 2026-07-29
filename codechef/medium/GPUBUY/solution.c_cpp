@@ -2,23 +2,30 @@
 using namespace std;
 
 int main() {
-	// your code goes here
-int t;
-cin>>t;
-while(t--){
-    int x,y,z;
-    int p=-1;
-    cin>>x>>y>>z;
-    int sum=x;
-    bool found =false;
-    for(int i=1;i<=x;i++){
-    int sum += y;
-    if(sum==z){
-        p=i;
-        found=true;
-        break;
+    int t;
+    cin >> t;
+
+    while (t--) {
+        int X, Y, Z;
+        cin >> X >> Y >> Z;
+
+        if (Z <= Y) {
+            cout << -1 << endl;
+            continue;
+        }
+
+        int price = X;
+        int coins = 0;
+        int months = 0;
+
+        while (coins < price) {
+            months++;
+            price += Y;
+            coins += Z;
+        }
+
+        cout << months << endl;
     }
-} if(found) cout<<i<<endl;
-else cout<<-1<<endl;
-} return 0;
+
+    return 0;
 }
