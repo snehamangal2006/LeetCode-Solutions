@@ -51,29 +51,31 @@ Explanation: There are 10 pairs of indices that satisfy the conditions in the st
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 24.4 MB (beats 87.25%)  
-**Submitted:** 2026-07-29T05:40:05.504Z  
+**Memory:** 24.6 MB (beats 52.04%)  
+**Submitted:** 2026-07-29T17:17:28.201Z  
 
 ```cpp
 class Solution {
 public:
     int countPairs(vector<int>& nums, int target) {
-         sort(nums.begin(), nums.end());
-
-        int left = 0;
-        int right = nums.size() - 1;
-        int count = 0;
-
-        while (left < right) {
-            if (nums[left] + nums[right] < target) {
-                count += right-left;
-                left++;
-            } else {
-                right--;
+       
+    int cnt = 0;
+    int n = nums.size();
+    int sum = 0;
+    
+    for(int i=0; i<n; i++)
+    {
+        for(int j=i+1; j<n; j++)
+        {
+            sum = nums[i] + nums[j];
+            if(sum < target)
+            {
+                cnt++;
             }
         }
-
-        return count;
+    }
+    
+    return cnt;
     }
 };
 ```
