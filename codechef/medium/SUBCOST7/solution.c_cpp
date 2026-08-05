@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+int t;
+cin>>t;
+while(t--){
+    int n,x,y;
+    cin>>n>>x>>y;
+    int sum=0;
+    for(int i=1;i<=n;i++){
+    if(i<=3){
+        sum = sum+x;
+    } else sum+=y;
+} cout<<sum<<endl;
+} return 0;
+
+}
