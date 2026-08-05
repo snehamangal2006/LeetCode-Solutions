@@ -27,6 +27,7 @@ For each test case, output on a new line the maximum balance you can have.
 - $-100 \le A_i \le 100$
 ### Sample 1:
 Input
+Copy to clipboard
 Output
 
 ```
@@ -58,38 +59,33 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-05T16:31:28.716Z  
+**Submitted:** 2026-08-05T16:30:56.129Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    int T;
-    cin >> T;
-
-    while (T--) {
-        int N;
-        cin >> N;
-
-        vector<int> A(N + 1);
-
-        long long sum = 0;
-        long long ans = 0;
-
-        for (int i = 1; i <= N; i++)
-            cin >> A[i];
-
-        for (int i = 2; i <= N; i++) {
-            if (A[i] > 0)
-                sum += A[i];
-
-            ans = max(ans, sum - i + 1);
+	// your code goes here
+int t;
+cin>>t;
+while(t--){
+    int n;
+    cin>>n;
+    int arr[n];
+    int sum=0;
+    for(int i =1;i<=n;i++){
+        cin>>arr[i];
+    } for(int i =1;i<n;i++){
+        for(int j=i+1;j<=n;j++){
+            if(arr[j]>0){
+                sum = sum+ arr[j]-j+i;
+                }
         }
-
-        cout << ans << '\n';
-    }
+    } cout<<sum<<endl;
+} return 0;
 }
+
 ```
 
 ---
