@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
 	// your code goes here
-in t;
+int t;
 cin>>t;
 while(t--){
     int n;
