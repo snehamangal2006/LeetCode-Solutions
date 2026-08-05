@@ -58,38 +58,16 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-05T16:31:39.901Z  
+**Submitted:** 2026-08-05T16:31:21.955Z  
 
 ```c_cpp
-#include <bits/stdc++.h>
-using namespace std;
-
-int main() {
-    int T;
-    cin >> T;
-
-    while (T--) {
-        int N;
-        cin >> N;
-
-        vector<int> A(N + 1);
-
-        long long sum = 0;
-        long long ans = 0;
-
-        for (int i = 1; i <= N; i++)
-            cin >> A[i];
-
-        for (int i = 2; i <= N; i++) {
-            if (A[i] > 0)
-                sum += A[i];
-
-            ans = max(ans, sum - i + 1);
-        }
-
-        cout << ans << '\n';
-    }
-}
+3
+6
+5 5 -1 5 -1 1
+5
+5 5 5 5 5
+3
+-4 -1 -5
 ```
 
 ---
