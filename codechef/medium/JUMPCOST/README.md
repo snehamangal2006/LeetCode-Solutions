@@ -55,36 +55,41 @@ Output
 
 ## Solution
 
-**Language:** C++  
+**Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-05T16:30:14.594Z  
+**Submitted:** 2026-08-05T16:32:17.856Z  
 
-```cpp
+```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
-in t;
-cin>>t;
-while(t--){
-    int n;
-    cin>>n;
-    int arr[n];
-    int sum=0;
-    for(int i =1;i<=n;i++){
-        cin>>arr[i];
-    } for(int i =1;i<n;i++){
-        for(int j=i+1;j<=n;j++){
-            if(arr[j]>0){
-                sum = sum+ arr[j]-j+i;
-                }
-        }
-    } cout<<sum<<endl;
-} return 0;
-}
+    int T;
+    cin >> T;
 
+    while (T--) {
+        int N;
+        cin >> N;
+
+        vector<int> A(N + 1);
+
+        long long sum = 0;
+        long long ans = 0;
+
+        for (int i = 1; i <= N; i++)
+            cin >> A[i];
+
+        for (int i = 2; i <= N; i++) {
+            if (A[i] > 0)
+                sum += A[i];
+
+            ans = max(ans, sum - i + 1);
+        }
+
+        cout << ans << '\n';
+    }
+}
 ```
 
 ---
