@@ -44,8 +44,8 @@ Output: 21
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 8.7 MB (beats 5.13%)  
-**Submitted:** 2026-07-25T19:12:40.587Z  
+**Memory:** 8.3 MB (beats 98.36%)  
+**Submitted:** 2026-08-14T17:58:37.895Z  
 
 ```cpp
 class Solution {
@@ -59,6 +59,7 @@ public:
         } if(r<INT_MIN || r>INT_MAX)
         return 0;
         return (int)r;
+        
     }
 };
 ```
