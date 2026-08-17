@@ -56,7 +56,7 @@ Explanation: No operation can be applied, we just shift the 0 to the end.
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
 **Memory:** 13.3 MB (beats 27.94%)  
-**Submitted:** 2026-08-17T18:28:51.295Z  
+**Submitted:** 2026-08-17T18:24:49.449Z  
 
 ```cpp
 class Solution {
