@@ -36,9 +36,9 @@ Output: ["h","a","n","n","a","H"]
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 27.2 MB (beats 53.54%)  
-**Submitted:** 2026-07-28T15:32:27.401Z  
+**Runtime:** 0 ms  
+**Memory:** 8.1 MB  
+**Submitted:** 2026-09-06T17:07:07.484Z  
 
 ```cpp
 class Solution {
@@ -51,6 +51,7 @@ public:
             swap(s[left], s[right]);
             left++;
             right--;
+            
         }
     }
 };
